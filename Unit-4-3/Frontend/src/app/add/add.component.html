@@ -1,0 +1,54 @@
+<html>
+  <div style="text-align-last: right; padding-right: 45%">
+    <h1>Add TODO's Here</h1>
+
+    <label><b>Name</b></label
+    >&nbsp;&nbsp;&nbsp;&nbsp;
+    <input
+      style="text-align-last: start"
+      type="text"
+      name="name"
+      id="name"
+      #name
+    /><br />
+    <label><b>Date</b></label
+    >&nbsp;
+    <input
+      style="text-align-last: start"
+      type="text"
+      name="date"
+      id="date"
+      #date
+    /><br />
+
+    <label><b>Time</b></label
+    >&nbsp;
+    <input
+      style="text-align-last: start"
+      type="string"
+      name="time"
+      id="time"
+      #time
+    /><br />
+    <label><b>Status</b></label
+    >&nbsp;
+    <input
+      style="text-align-last: start"
+      type="text"
+      name="status"
+      id="status"
+      #status
+    /><br />
+    <br />
+    <button
+      type="button"
+      style="margin-right: 6%"
+      (click)="Add(name.value, date.value, time.value, status.value)"
+    >
+      Add
+    </button>
+    <button type="button" style="margin-right: 15px">
+      <a routerLink="/home" style="text-decoration: none; color: black">Back</a>
+    </button>
+  </div>
+</html>

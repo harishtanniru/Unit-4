@@ -1,0 +1,77 @@
+<html>
+  <form>
+    <div style="text-align-last: right; padding-right: 45%">
+      <h1>Update TODO's</h1>
+      <input
+        style="text-align-last: start"
+        type="hidden"
+        name="todo_id"
+        id="todo_id"
+        value="{{ data.todo_id }}"
+        #todo_id
+      /><br />
+      <label><b>Name</b></label
+      >&nbsp;&nbsp;&nbsp;&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="name"
+        id="name"
+        #name
+        value="{{ data.title }}"
+      /><br />
+      <label><b>Date</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="date"
+        id="date"
+        value="{{ data.date }}"
+        #date
+      /><br />
+
+      <label><b>Time</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="time"
+        id="time"
+        value="{{ data.time }}"
+        #time
+      /><br />
+      <label><b>Status</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="status"
+        id="status"
+        value="{{ data.status }}"
+        #status
+      /><br />
+      <br />
+      <button
+        type="submit"
+        style="margin-right: 6%"
+        (click)="
+          Update(
+            todo_id.value,
+            name.value,
+            date.value,
+            time.value,
+            status.value
+          )
+        "
+      >
+        Update
+      </button>
+      <button type="button" style="margin-right: 15px">
+        <a routerLink="/home" style="text-decoration: none; color: black"
+          >Back</a
+        >
+      </button>
+    </div>
+  </form>
+</html>
